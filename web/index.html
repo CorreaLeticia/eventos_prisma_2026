@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Eventos Climáticos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #f3f6fa;
+            color: #263445;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #214761;
+            color: white;
+            padding: 24px 7%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        header p {
+            margin: 7px 0 0;
+            color: #e1edf5;
+            font-size: 14px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            padding: 38px;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(33, 71, 97, 0.10);
+        }
+
+        .icone {
+            width: 62px;
+            height: 62px;
+            background: #e5eff6;
+            color: #214761;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 22px;
+        }
+
+        .login-container h2 {
+            margin: 0 0 10px;
+            font-size: 26px;
+            color: #214761;
+        }
+
+        .descricao {
+            margin: 0 0 28px;
+            color: #718096;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        .campo label {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d2dbe4;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .campo input:focus {
+            border-color: #4683a5;
+            box-shadow: 0 0 0 3px rgba(70, 131, 165, 0.12);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: #214761;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-login:hover {
+            background: #18374c;
+        }
+
+        #mensagem {
+            color: #b42318;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 16px 0 0;
+            text-align: center;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            color: #718096;
+            font-size: 13px;
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 22px;
+            }
+
+            .login-container {
+                padding: 27px 22px;
+            }
+
+            .login-container h2 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Eventos Climáticos</h1>
+        <p>Monitoramento e registro de eventos climáticos</p>
+    </header>
+
+    <main>
+        <section class="login-container">
+
+            <div class="icone" aria-hidden="true">☁</div>
+
+            <h2>Bem-vindo!</h2>
+
+            <p class="descricao">
+                Entre na sua conta para acompanhar e gerenciar
+                os registros de eventos climáticos.
+            </p>
+
+            <form id="formLogin">
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn-login">
+                    Entrar na plataforma
+                </button>
+
+                <p id="mensagem" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        Projeto Eventos Climáticos | Desenvolvimento de Sistemas
+    </footer>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>
+
